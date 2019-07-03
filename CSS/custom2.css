@@ -1,0 +1,33 @@
+.LOBox{
+	
+	background-color: #0074D9;
+  	width: 40%;
+  	height: 10%;
+  	display: inline-block;
+  	float: left;
+  	margin-left:30%;
+  	margin-right:30%;
+}
+
+.boxContainer{
+ 	
+	background-color: #f66;
+	text-align: center;
+	height:100%;
+
+
+}
+
+#test{
+	display: none;
+	background-color: #0074D9;
+	margin-top: 5%;
+	padding-left: 2%;
+	padding-top: 1%;
+  	width: 40%;
+  	height: 40%;
+  	float: left;
+  	margin-left:30%;
+  	margin-right:30%;
+  	text-align: left;
+}
