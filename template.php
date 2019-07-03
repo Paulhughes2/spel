@@ -1,14 +1,21 @@
 <?php //include ('Header.php'); 
 include ('connection.php');
 session_start();
+if(isset($_POST['submit'])){
+	if(!empty($_POST['Qtype'])) {
 
+var_dump($_SESSION["AnsComp"]);
+	}
+}
 
-if($_SESSION["AnsComp"] == FALSE)
+if($_SESSION["AnsComp"] === false)
 {
+	echo "not dead";
 	include ('questionfilter.php');
 }else
 {
-	include ('report.php');
+	echo "dead";
+	//include ('report.php');
 }
 
 ?>

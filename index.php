@@ -38,6 +38,7 @@ function showQuestions(val)
 		success: function(data){
 
 			document.getElementById("test").style.display = "inline";
+			document.getElementById("button1").style.display = "inline";
 			$("#test").html(data);
 		}
 
@@ -45,13 +46,14 @@ function showQuestions(val)
 
 }
     $(document).ready(function() {
+    	console.log("fdsgfg");
 
-        $("button").click(function(){
+        $("Qtype").click(function(){
 
             var favorite = [];
 
-            $.each($("input[name='Qtype']:checked"), function(){            
-
+            $.each($("input[name='Qtype']:checked"), function(){
+                console.log($(this).val());
                 favorite.push($(this).val());
 
             });
@@ -59,6 +61,7 @@ function showQuestions(val)
             document.getElementById("questions").textContent = "" + favorite.join(", ");
 
         });
+
 
     });
 
@@ -71,8 +74,8 @@ function showQuestions(val)
 
 <div class = "boxContainer">
 	<div class="LOBox">
-
-	<form class = "Qform" id = "Qform" action = "template.php" method = "POST">
+<form class = "Qform" id = "Qform" action = "template.php" method = "POST">
+	
 		<label>Learning Objective</label>
 			<select name = "learningObjective" id = "lo-List" onChange="getState(this.value);">
 					<option value = "">Select</option>
@@ -90,12 +93,13 @@ function showQuestions(val)
 		<select id = "subloList" name = "SubLo" onChange="showQuestions(this.value);">
 			<option value = "">Select Sub objective</option>
 		</select>
-	</div>
-			<div id = "test">
-			</div>
-	<input type = "submit" value = "submit" >
-	</form>
 	
+			
+<div id = "test">
+			</div>
+	<input class="btn btn-primary" id="button1" name="submit" type = "submit"  value = "Submit" >
+	</form>
+	</div>
 </div>
 
 

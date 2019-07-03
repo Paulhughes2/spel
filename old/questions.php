@@ -14,14 +14,13 @@
 
 echo $_POST["SubLo"];
 $questionTypes = array();
-
+echo $questionTypes[1];
 
 		
-}
-}else
-{
-	header('Location:http://localhost/spel/index.php ');
-}
+
+
+	//header('Location:http://localhost/spel/index.php ');
+
 	$i = 1;
  	$answerString = "MCAnswer";
 	
@@ -32,7 +31,7 @@ $questionTypes = array();
 	<?php
 	
 
-}
+
 	
 	while ($row = $result->fetch_assoc()) 
 	{

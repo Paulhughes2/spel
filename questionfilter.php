@@ -22,7 +22,6 @@ if((isset($_POST["Answer"])) || (isset($_SESSION["Answertemp"])))
 	//var_dump($_SESSION["QuestionAnswerTemp"]);
 	
 
-
 if(isset($_POST["Qtype"]))
 {
 	$_SESSION["Qselected"] = $_POST["Qtype"];
@@ -34,6 +33,7 @@ if(isset($_SESSION["Qselected"]))
 	$SM = $_SESSION["SMAarray"];
 	$EQ = $_SESSION["EQAarray"];
 }
+
 if (isset($temp))
 {
 	$LO = $_SESSION["LO"];
@@ -130,7 +130,7 @@ if (isset($temp))
 		}else{
 			
 			$_SESSION["AnsComp"] = TRUE;
-			header('Location:http://localhost/spel/template.php ');
+			//header('Location:http://localhost/spel/template.php ');
 		}
 	}
 
